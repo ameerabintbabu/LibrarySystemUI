@@ -14,6 +14,8 @@
     </select>
     <select id="filterSubCategory" data-placeholder="Order Status" style="width:12%;">
     </select>
+    <button type="button" class="btn btn-default btn-success" data-dismiss="modal" onclick="objBook.RedirectToQuestion()">Get Last 50 questions from stack overflow</button>
+
     <table class="table">
         <tr>
             <th>
@@ -59,10 +61,10 @@
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 @*<td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.BookId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.BookId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.BookId })
-                </td>*@
+                        @Html.ActionLink("Edit", "Edit", new { id = item.BookId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.BookId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.BookId })
+                    </td>*@
             </tr>
         }
 

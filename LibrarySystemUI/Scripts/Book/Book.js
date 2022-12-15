@@ -80,3 +80,7 @@ Book.prototype.GetAllBooks = function (ParentCategoryId,SubCategoryId) {
 
     });
 }
+Book.prototype.RedirectToQuestion = function () {
+   
+    window.open("https://localhost:44389/Question/GetLastFiftyQuestions", "_self");
+}

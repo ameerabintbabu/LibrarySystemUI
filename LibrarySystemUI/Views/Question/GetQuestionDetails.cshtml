@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "GetQuestionDetails";
+}
+
+<h2>GetQuestionDetails</h2>
+<div id="QuestionDetails" class="settingsList"></div>
+
+<script src="~/Scripts/Questions/Questions.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script>
+     var Id = '@HttpContext.Current.Request.RequestContext.RouteData.Values["id"]'
+    $(document).ready(function () {
+
+
+        objQuestion.init();
+
+    });
+</script>

@@ -1,0 +1,64 @@
+﻿@model LibrarySystemUI.Models.QuestionInfo
+
+@{
+    ViewBag.Title = "GetLastFiftyQuestions";
+}
+<div id="div_questions">
+    <h1>These are the last fifty questions from Stack Overflow :</h1>
+       <div id="QuestionList" class="settingsList"></div>
+</div>
+<div id="div_details">
+    </br>
+    </br>
+    <button type="button" class="btn btn-default btn-success" id="btn_GetQuestions" data-dismiss="modal" onclick="objQuestion.GetLastfiftyQuestions()">Get Last 50 questions from stack overflow</button>
+    </br>
+    </br>
+    <div class="col-xs-6">
+        <h3>Details</h3>
+        <ul class="styledListing">
+            <li>
+                <label>QuestionId :</label> <span id="spn_QuestionId"></span>
+            </li>
+            <li>
+                <label>Question title :</label> <span id="spn_Title"></span>
+            </li>
+            <li>
+                <label>Question Link :</label> <span id="spn_Link"></span>
+            </li>
+            <li>
+                <label>User Id :</label> <span id="spn_user_id"></span>
+            </li>
+
+            <li>
+                <label>Owner :</label> <span id="spn_display_name"></span>
+            </li>
+            <li>
+                <label>User Type :</label> <span id="spn_user_type"></span>
+            </li>
+
+            <li>
+                <label>Answer Count :</label> <span id="spn_answer_count"></span>
+            </li>
+            <li>
+                <label>View Count :</label> <span id="spn_view_count"></span>
+            </li>
+
+        </ul>
+    </div>
+    <div id="QuestionDetails" class="settingsList">
+
+    </div>
+</div>
+
+<script src="~/Scripts/Questions/Questions.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script>
+   
+    $(document).ready(function () {
+
+
+        objQuestion.init();
+
+    });
+</script>
