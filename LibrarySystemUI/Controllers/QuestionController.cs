@@ -16,9 +16,6 @@ namespace LibrarySystemUI.Controllers
         {
             return View();
         }
-        //public ActionResult GetQuestionDetails(string QuestionId)
-        //{
-        //    return View();
-        //}
+        
     }
 }

@@ -11,7 +11,7 @@ namespace LibrarySystemUI.Controllers
 {
     public class BookController : Controller
     {
-       
+        [HttpGet]
         public ActionResult BookCollection(int? ParentCategoryId, int? SubCategoryId)
         {
             if (ParentCategoryId == null) ParentCategoryId =0;
@@ -25,12 +25,13 @@ namespace LibrarySystemUI.Controllers
             var data = consumeapi.Result;
             if (data.IsSuccessStatusCode)
             {
-                ModelState.Clear();                
                 var displaydata = data.Content.ReadAsAsync<List<Book>>();
                 displaydata.Wait();
                 objBook = displaydata.Result;
-
             }
+           
+            ModelState.Clear();
+           
             return View(objBook);
         }
     }

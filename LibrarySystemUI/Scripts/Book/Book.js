@@ -24,10 +24,10 @@ Book.prototype.FillParentCategory = function () {
         data: {},
         success: function (data) {
             var htmloption = "";
-            //if (data.HttpStatusCode == 200 && data.StatusCode == 1) {
+          
             var CategoryList = data.length;
             if (data.length > 0) {
-                htmloption = "<option value='0'>Select</option>";
+                htmloption = "<option value='0'>Select Category</option>";
                 $.each(data, function (key, value) {
                   
                         htmloption += "<option value=" + value.CategoryId + ">" + value.CategoryName + "</option>";
@@ -38,7 +38,7 @@ Book.prototype.FillParentCategory = function () {
 
             $("#filterParentCategory").html(htmloption);
         }
-        
+         
     });
 }
 
@@ -51,10 +51,10 @@ Book.prototype.FillSubCategory = function (ParentCategoryId) {
         data: { "CategoryId":  parseInt(ParentCategoryId)},
         success: function (data) {
             var htmloption = "";
-            //if (data.HttpStatusCode == 200 && data.StatusCode == 1) {
+          
             var CategoryList = data.length;
             if (data.length > 0) {
-                htmloption = "<option value='0'>Select</option>";
+                htmloption = "<option value='0'>Select SubCategory</option>";
                 $.each(data, function (key, value) {
 
                     htmloption += "<option value=" + value.CategoryId + ">" + value.CategoryName + "</option>";
